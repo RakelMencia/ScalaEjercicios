@@ -7,7 +7,8 @@ import java.util
 object EjerciciosAr{
   def main(args: Array[String]): Unit = {
     //ex1()
-    ex2()
+    //ex2()
+    ex3()
   }
 
   //Ejercicio 1
@@ -25,4 +26,11 @@ object EjerciciosAr{
     out.print(texto)
     out.close()
   }
+
+  //Ejercicio 3
+  def ex3():Unit={
+    val texto = Source.fromFile("other").mkString.split("\\s+").filter(_.length > 12)
+    println(texto.mkString(", "))
+  }
+
 }
