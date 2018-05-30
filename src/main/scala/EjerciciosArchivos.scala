@@ -1,18 +1,28 @@
 
 import scala.io.Source
 import java.io.PrintWriter
-val out = new PrintWriter("01.txt")
-val source = Source.fromFile("01.out").getLines.toArray[String].reverse.foreach(out.println(_))
-out.close()
+import java.util
 
-object EjerciciosA{
+
+object EjerciciosAr{
   def main(args: Array[String]): Unit = {
-
+    //ex1()
+    ex2()
   }
 
   //Ejercicio 1
-  def Ex1():Unit={
-    val salida = new PrintWriter("Ejercicio1.txt")
-    val arrayArchivo = Source.fromFile()
+  def ex1():Unit={
+    val source = Source.fromFile("other").getLines.toArray.reverse
+    val out = new PrintWriter("Ejercicio1.txt")
+    out.println(source.mkString("\n"))
+    out.close()
+  }
+
+  //Ejercicio 2
+  def ex2():Unit={
+    val texto = Source.fromFile("other").mkString.replaceAll("\t", " ")
+    val out = new PrintWriter("Ejercicio2.txt")
+    out.print(texto)
+    out.close()
   }
 }
