@@ -1,8 +1,6 @@
 
 import scala.io.Source
 import java.io.PrintWriter
-import java.util
-
 
 object EjerciciosAr{
   def main(args: Array[String]): Unit = {
